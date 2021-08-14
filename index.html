@@ -7,15 +7,14 @@
     <title>Contador</title>
 </head>
 <body>
-    <div>
-        <h1>CRONÔMETRO</h1>
-        <H2>UM CRONÔMETRO FEITO COM JAVASCRIPT PURO</H2>
+    <div class="main-div">        
         <p><span id='segundos'>00</span>:<span id='centesimos'>00</span></p>
         <div>
             <button class="btn" onclick="iniciar()">Iniciar</button>
             <button class="btn" onclick="parar()">Parar</button>
             <button class="btn" onclick="resetar()">Resetar</button>
         </div>
+        <p style="font-size: 12px;">UM CRONÔMETRO SIMPLES FEITO COM JAVASCRIPT PURO.</p>
     </div>
     <footer>
         <span><a href="https://github.com/matheus55391">GITHUB</a></span>
@@ -29,6 +28,12 @@
         text-align: center;
         background-color: rgb(98, 66, 134);
         color: white;
+        align-items: center;
+        display: flex;
+        height: 85vh;
+        justify-content: center;
+
+
     }
     .btn{
         font-family: monospace;
@@ -38,14 +43,18 @@
         color: white;
         border:1px solid white; 
         background-color: transparent;
+        border-radius: 40px;
+
     }
     .btn:hover{
         background-color: white;
+        transition: background-color 0.2s linear;
         color: black;
     }
     p{
-        font-style: inherit;
-        font-size: 200%;
+        font-style: initial;
+        font-size: 700%;
+        margin: 20px;
     }
     footer{
         position: fixed;
@@ -57,12 +66,11 @@
         color:white;
         text-decoration: none;
         padding-left: 50px;
-        padding-right: 50px;
-
-        
+        padding-right: 50px;        
     }
     footer > span > a:hover{
         background-color: rgb(0, 0, 0);
         color: rgb(255, 255, 255);
     }
+
 </style>

@@ -7,6 +7,7 @@ var cont;
 
 function iniciar(){
     cont = setInterval(()=> {cronometro()}, 10);
+     
 }
 
 function parar(){
@@ -27,6 +28,7 @@ function cronometro(){
         cs = 0
         ss++
         if(ss == 60){
+
             resetar()
         }
     }
