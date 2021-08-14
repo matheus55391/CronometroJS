@@ -26,6 +26,9 @@ function cronometro(){
     if(cs > 99){
         cs = 0
         ss++
+        if(ss == 60){
+            resetar()
+        }
     }
     atualizar_display()   
 
