@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <div>
+        <h1>CRONÔMETRO</h1>
+        <H2>UM CRONÔMETRO FEITO COM JAVASCRIPT PURO</H2>
+        <p><span id='segundos'>00</span>:<span id='centesimos'>00</span></p>
+        <div>
+            <button class="btn" onclick="iniciar()">Iniciar</button>
+            <button class="btn" onclick="parar()">Parar</button>
+            <button class="btn" onclick="resetar()">Resetar</button>
+        </div>
+    </div>
+    <footer>
+        <span><a href="https://github.com/matheus55391">GITHUB</a></span>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
+<style>
+    body{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        background-color: rgb(98, 66, 134);
+        color: white;
+    }
+    .btn{
+        font-family: monospace;
+        font-size: 150%;
+        min-width: 100px;
+        min-height: 60px;
+        color: white;
+        border:1px solid white; 
+        background-color: transparent;
+    }
+    .btn:hover{
+        background-color: white;
+        color: black;
+    }
+    p{
+        font-style: inherit;
+        font-size: 200%;
+    }
+    footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    footer > span > a {
+        color:white;
+        text-decoration: none;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        
+    }
+    footer > span > a:hover{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+</style>
