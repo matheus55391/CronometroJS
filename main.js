@@ -1,12 +1,15 @@
+const span_minutos = document.getElementById('minutos')
 const span_segundos = document.getElementById('segundos')
 const span_centesimos = document.getElementById('centesimos')
 const formatador = (num)=> (num > 9) ? `${num}`: `0${num}`
+var mm = 0
 var ss = 0
 var cs = 0
 var cont;
 
 function iniciar(){
-    cont = setInterval(()=> {cronometro()}, 10);
+  parar()
+  cont = setInterval(()=> {cronometro()}, 10);
      
 }
 
@@ -16,20 +19,23 @@ function parar(){
 
 function resetar(){
     parar()
-    ss = cs = 0
+    mm = ss = cs = 0
     atualizar_display()
     
 }
 
-function cronometro(){
-    console.log(`${ss}:${cs}`)
+function cronometro(){   
     cs++
     if(cs > 99){
         cs = 0
         ss++
         if(ss == 60){
-
-            resetar()
+            ss = 0
+            mm ++
+            if(mm == 60){
+              alert("limite de 1 hora atingido!")
+              resetar()
+            }
         }
     }
     atualizar_display()   
@@ -37,6 +43,7 @@ function cronometro(){
 }
 
 function atualizar_display(){
+    span_minutos.innerHTML = formatador(mm)
     span_segundos.innerHTML = formatador(ss)
     span_centesimos.innerHTML = formatador(cs)
 }

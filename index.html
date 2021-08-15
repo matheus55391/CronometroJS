@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="main-div">        
-        <p><span id='segundos'>00</span>:<span id='centesimos'>00</span></p>
+        <p><span id='minutos'>00</span>:<span id='segundos'>00</span>:<span id='centesimos'>00</span></p>
         <div>
             <button class="btn" onclick="iniciar()">Iniciar</button>
             <button class="btn" onclick="parar()">Parar</button>
@@ -17,7 +17,7 @@
         <p style="font-size: 12px;">UM CRONÔMETRO SIMPLES FEITO COM JAVASCRIPT PURO.</p>
     </div>
     <footer>
-        <span><a href="https://github.com/matheus55391">GITHUB @matheus55391</a></span>
+        <span><a href="https://github.com/matheus55391" target="_blank">GITHUB @matheus55391</a></span>
     </footer>
     <script src="./main.js"></script>
 </body>
@@ -29,10 +29,9 @@
         background-color: rgb(98, 66, 134);
         color: white;
         align-items: center;
+        justify-content: center;
         display: flex;
         height: 85vh;
-        justify-content: center;
-
 
     }
     .btn{
@@ -45,17 +44,38 @@
         background-color: transparent;
         border-radius: 40px;
 
+
     }
     .btn:hover{
         background-color: white;
         transition: background-color 0.2s linear;
         color: black;
     }
-    p{
+    @media (max-width:960px) 
+    {
+        p{
+        
+        font-style: initial;
+        font-size: 400%;
+        margin: 20px;
+        }
+        .btn{
+            font-size: 120%;
+            min-width: 100px;
+            min-height: 30px;
+        }
+    
+    }
+    @media (min-width:960px) 
+    {
+        p{
         font-style: initial;
         font-size: 700%;
         margin: 20px;
+        }
+    
     }
+
     footer{
         position: fixed;
         left: 0;
